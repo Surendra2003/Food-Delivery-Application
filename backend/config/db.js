@@ -6,6 +6,14 @@ import mongoose from "mongoose";
 // }
 
 
-await mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("Database connected..!"))
-  .catch((err) => console.error("DB Connection failed:", err));
+// import mongoose from "mongoose";
+
+export const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect(process.env.MONGO_URI);
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (err) {
+    console.error("DB Connection failed:", err);
+    process.exit(1);
+  }
+};
