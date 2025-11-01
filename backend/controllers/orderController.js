@@ -16,7 +16,7 @@ const placeOrder = async (req,res)=>{
 
 // Once deploy the Project we need paste the Link of front end in this part
 
-    const frontend_url = "https://food-delivery-application-frontend-jcgj.onrender.com"
+    const frontend_url = "https://food-delivery-application-front.onrender.com"
 
 
 
